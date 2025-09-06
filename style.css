@@ -296,13 +296,13 @@ section {
 }
 
 .details-container {
-  padding: 1.5rem;
+  padding: 0.5rem;
   flex: 1;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  text-align: center;
+  text-align: justify;
 }
 
 .section-container {
@@ -315,6 +315,10 @@ section {
   width: 400px;
   margin: auto 0;
 }
+
+.text-container {
+    text-align: justify;
+  }
 
 /* EXPERIENCE SECTION */
 
