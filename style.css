@@ -89,16 +89,21 @@ a:hover {
 
 
 .hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s;
 }
 
+.hamburger-icon:hover,
 .hamburger-icon.open {
-  background: #e0e0e0; /* Gray shading when open */
+  background: #e0e0e0; /* subtle gray */
 }
-
 
 .hamburger-icon span {
   width: 100%;
@@ -119,6 +124,7 @@ a:hover {
   z-index: 100;
 }
 
+
 .menu-links a {
   display: block;
   padding: 10px;
@@ -127,6 +133,11 @@ a:hover {
   color: black;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
+}
+
+.menu-links li:hover {
+  background: #e0e0e0;
+  border-radius: 6px;
 }
 
 .menu-links li {
