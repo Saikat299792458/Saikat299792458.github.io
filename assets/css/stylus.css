@@ -80,17 +80,18 @@ body {
   left: 260px;
   right: 0;
   height: var(--navbar-height);
-  background: rgba(30, 30, 30, 0.7);
+  background: #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
   z-index: 1000;
-  backdrop-filter: blur(8px);
+  /*backdrop-filter: blur(8px);*/
 }
 
 .navbar .nav-links {
   display: flex;
+  backdrop-filter: blur(8px);
   gap: 1rem;
 }
 
@@ -100,10 +101,39 @@ body {
   font-weight: 500;
 }
 
-.navbar .hamburger {
+.hamburger {
+  width: 32px;
+  height: 32px;
   display: none;
-  font-size: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  z-index: 1100;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 4px 0;
+  background: #fff;
+  border-radius: 2px;
+  /*transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);*/
+  transition: transform 0.3s linear, opacity 0.2s linear;
+  position: relative;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
 }
 
 /* Content */
@@ -120,22 +150,22 @@ body {
   margin-bottom: 3rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+
+/* Hamburger hover/focus effect */
+.hamburger:hover, .hamburger:focus {
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+.hamburger:hover span, .hamburger:focus span {
+  background: #222;
 }
 
-form input, form textarea, form button {
-  padding: 0.5rem;
-  border: none;
-  border-radius: 4px;
-}
-
-form button {
-  background: #444;
-  color: white;
-  cursor: pointer;
+/* Nav links hover/focus effect */
+.nav-links a:hover, .nav-links a:focus {
+  background: #f0f0f0;
+  color: #222;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
 }
 
 /* Responsive */
@@ -157,23 +187,28 @@ form button {
   }
 
   .navbar .nav-links {
-    display: none;
+    display: flex;
     flex-direction: column;
-    background: rgba(30, 30, 30, 0.95);
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(8px);
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    /*transition: max-height 0.4s cubic-bezier(.68,-0.55,.27,1.55), padding 0.3s;*/
+    transition: max-height 0.4s linear, padding 0.3s linear;
   }
 
   .navbar .nav-links.active {
-    display: flex;
+    padding: 1rem 0;
+    max-height: 500px; /* Large enough for all links */
   }
-
   .navbar .hamburger {
-    display: block;
+    display: flex;
   }
 
   .content {
