@@ -191,6 +191,22 @@ body {
   margin-bottom: 3rem;
 }
 
+.content section .h2 {
+  margin-bottom: 0.5rem;
+}
+
+.content section .h2 ion-icon {
+  vertical-align: middle;
+  margin-right: 0.3em;
+  padding-bottom:3px
+}
+
+.content section p {
+  padding-left: 10px;
+  margin:0;
+}
+
+
 /* Nav links hover/focus effect */
 .nav-links a:hover, .nav-links a:focus {
   color: var(--golden-color);
