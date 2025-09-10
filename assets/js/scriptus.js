@@ -9,6 +9,8 @@ function callPhone()
     window.location = "tel:+8801827370418";
 }
 
+// Dynamic copyright year
+ document.getElementById("copyright-year").textContent = new Date().getFullYear()
 
 // Mobile Navbar Toggle
 const hamburger = document.getElementById('hamburger');
