@@ -34,12 +34,12 @@
   <body>
       <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="profile">
+    <div class="profile" style="text-align: center;">
       <div class="profile-img-wrapper">
         <img src="assets/images/formal.png" alt="Profile picture">
       </div>
-      <h1>Saikat Chakraborty</h1>
-      <p>Electrical and Electronic Engineer</p>
+      <h1 style="margin-bottom: 5px;">Saikat Chakraborty</h1>
+      <p style="margin: 5px;">Electrical and Electronic Engineer</p>
     </div>
     <div class="contact-info">
       <div onclick="sendEmail();" style="cursor: pointer;">
@@ -52,7 +52,7 @@
       </div>
       <div>
         <ion-icon name="business-outline"></ion-icon>
-        <span>Incepta Pharma Ltd.</span>
+        <span>Incepta Pharmaceuticals Ltd.</span>
       </div>
       <div>
         <ion-icon name="location-outline"></ion-icon>
@@ -71,12 +71,12 @@
     <header class="navbar">
       <div class="logo"></div>
       <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="assets/misc/Saikat_Chakraborty.pdf">Resume</a>
-        <a href="assets/html/pub.html">Publications</a>
-        <a href="assets/html/cert.html">Certificates</a>
-        <a href="assets/html/projects.html">Projects</a>
-        <a href="assets/html/repo.html">Repositories</a>
+        <button class="navbar-link active" data-nav-link>About</button>
+        <button class="navbar-link" data-nav-link>Resume</button>
+        <button class="navbar-link" data-nav-link>Publications</button>
+        <button class="navbar-link" data-nav-link>Certificates</button>
+        <button class="navbar-link" data-nav-link>Projects</button>
+        <button class="navbar-link" data-nav-link>Repositories</button>
       </nav>
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -87,6 +87,7 @@
 
     <!-- Main Content -->
     <main class="content">
+      <article class="about active" style="padding-top: 0;" data-page="about">
       <section id="about">
         <h2 class="h2"><ion-icon name="person-circle-outline"></ion-icon>About Me</h2>
         <p>
@@ -126,7 +127,7 @@
         </p>
       </section>
       <section id="Experience">
-        <h2 class="h2"><ion-icon name="medal-outline"></ion-icon>Experience</h2>
+        <h2 class="h2"><ion-icon name="extension-puzzle-outline"></ion-icon>Experience</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus, neque id cursus faucibus, 
           tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. 
@@ -143,6 +144,19 @@
           Phasellus ultrices nulla quis nibh. Quisque a lectus.
         </p>
       </section>
+      </article>
+
+
+
+      
+      <article class="resume" data-page="resume">
+      <section id="resume">
+        <h2 class="h2"><ion-icon name="document-text-outline"></ion-icon>Resume</h2>
+        <p>
+          Let's put a drive pdf viewer window here with a download button.
+        </p>
+      </section>
+      </article>
       <footer>
         <p>&copy; <span id="copyright-year"></span> Saikat Chakraborty</p>
       </footer>

@@ -11,23 +11,20 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  background: var(--content-color);
+  background: var(--sidebar-color);
+  display: flex;
 }
 
 /* Sidebar */
 .sidebar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  width: 300px;
-  height: 100vh;
+  width: 400px;
+  height: 600px;
   background: var(--sidebar-color);
   overflow: hidden;
   padding-top: 100px;
-}
-
-.sidebar .profile {
-  text-align: center;
 }
 
 .profile-img-wrapper {
@@ -52,14 +49,6 @@ body {
   transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55);
 }
 
-.sidebar .profile h1 {
-  margin-bottom: 5px;
-}
-
-.sidebar .profile p {
-  margin: 5px;
-}
-
 .sidebar .contact-info {
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +63,7 @@ body {
   display: flex;
   flex: 1 1 180px; /* Adjust min width as needed */
   flex-direction: row;
-  min-width: 230px;
+  min-width: 250px;
   height: 30px;
   padding-top: 7px;
   background-color: var(--contact-div-color);
@@ -113,6 +102,7 @@ body {
   color: var(--golden-color);
 }
 
+
 /* Navbar */
 .navbar {
   position: fixed;
@@ -135,10 +125,20 @@ body {
   gap: 1rem;
 }
 
-.navbar .nav-links a {
+.navbar .nav-links button {
+  background: none;
+  border: none;
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+/* Nav links hover/focus effect */
+.nav-links button:hover, .nav-links button:focus {
+  color: var(--golden-color);
+  border-radius: 6px;
+  transition: color 0.2s;
 }
 
 .hamburger {
@@ -178,12 +178,12 @@ body {
 
 /* Content */
 .content {
-  margin-left: 300px;
   margin-top: var(--navbar-height);
   padding: 1rem;
   flex: 1;
   overflow-y: auto;
   text-align: justify;
+  background: var(--content-color)
 }
 
 .content section {
@@ -191,7 +191,8 @@ body {
 }
 
 .content section .h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
+  margin-top: 10px
 }
 
 .content section .h2 ion-icon {
@@ -211,13 +212,15 @@ body {
   padding: 1rem 0;
 }
 
-
-/* Nav links hover/focus effect */
-.nav-links a:hover, .nav-links a:focus {
-  color: var(--golden-color);
-  border-radius: 6px;
-  transition: color 0.2s;
+article {
+  display: none;
 }
+
+article.active {
+  display: block;
+  animation: fade 0.5s ease backwards;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -231,6 +234,10 @@ body {
     height: auto;
     align-items: center;
     padding-top: 100px;
+  }
+
+  .sidebar.inactive {
+  display: none;
   }
 
   .navbar {
@@ -266,5 +273,9 @@ body {
   .content {
     margin-left: 0;
     margin-top: 0px;
+  }
+  
+  article {
+    padding-top: var(--navbar-height);
   }
 }
