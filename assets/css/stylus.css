@@ -20,7 +20,8 @@ body {
   position: sticky;
   top: 0;
   left: 0;
-  width: 400px;
+  width: 30%;
+  min-width: 400px;
   height: 600px;
   background: var(--sidebar-color);
   overflow: hidden;
@@ -216,6 +217,11 @@ article {
   display: none;
 }
 
+article iframe {
+  width: 100%;
+  height:60vh;
+}
+
 article.active {
   display: block;
   animation: fade 0.5s ease backwards;
@@ -226,6 +232,7 @@ article.active {
 @media (max-width: 768px) {
   body {
     flex-direction: column;
+    background: var(--content-color)
   }
 
   .sidebar {
@@ -234,6 +241,8 @@ article.active {
     height: auto;
     align-items: center;
     padding-top: 100px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .sidebar.inactive {
