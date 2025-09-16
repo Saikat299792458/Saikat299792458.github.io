@@ -1,3 +1,0 @@
-- [ ] PDF embed Content Security Policy Error.
-- [ ] PDF embed No Download button, and the popup button doesn't work.
-- [ ] Desktop view: If zoomed out too much, weird div layout appears.

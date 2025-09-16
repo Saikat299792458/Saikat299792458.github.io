@@ -22,7 +22,7 @@ body {
   top: 0;
   left: 0;
   width: 30%;
-  min-width: 400px;
+  min-width: 390px;
   height: var(--sidebar-height);
   background: var(--sidebar-color);
   overflow: hidden;
@@ -199,7 +199,7 @@ body {
   margin-top: 10px
 }
 
-.content section .h2 ion-icon {
+.content article .h2 ion-icon {
   vertical-align: middle;
   margin-right: 0.3em;
   padding-bottom:3px
