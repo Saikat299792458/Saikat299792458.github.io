@@ -5,6 +5,7 @@
   --content-color: rgba(15, 15, 15, 1);
   --contact-div-color: rgba(50,50,50,1);
   --golden-color: rgba(255, 216, 110, 1);
+  --sidebar-height: 600px;
 }
 /* Reset */
 body {
@@ -22,7 +23,7 @@ body {
   left: 0;
   width: 30%;
   min-width: 400px;
-  height: 600px;
+  height: var(--sidebar-height);
   background: var(--sidebar-color);
   overflow: hidden;
   padding-top: 100px;
@@ -179,8 +180,10 @@ body {
 
 /* Content */
 .content {
+  min-height: calc(100vh - var(--navbar-height));
   margin-top: var(--navbar-height);
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   flex: 1;
   overflow-y: auto;
   text-align: justify;
@@ -210,16 +213,16 @@ body {
   background-color: var(--footer-color);
   color: rgb(120,120,120);
   text-align: center;
-  padding: 1rem 0;
 }
 
 article {
   display: none;
 }
 
-article iframe {
+article object {
   width: 100%;
-  height:60vh;
+  height: 85%;
+  border:none;
 }
 
 article.active {
