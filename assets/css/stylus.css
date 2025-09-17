@@ -22,7 +22,7 @@ body {
   top: 0;
   left: 0;
   width: 30%;
-  min-width: 390px;
+  min-width: 350px;
   height: var(--sidebar-height);
   background: var(--sidebar-color);
   overflow: hidden;
