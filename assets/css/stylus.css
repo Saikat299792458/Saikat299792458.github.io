@@ -194,11 +194,6 @@ body {
   margin-bottom: 3rem;
 }
 
-.content section .h2 {
-  margin-bottom: 10px;
-  margin-top: 10px
-}
-
 .content article .h2 ion-icon {
   vertical-align: middle;
   margin-right: 0.3em;
@@ -231,9 +226,17 @@ article.active {
 }
 
 .container {
-  display: flex;
+  display: block;
+  align-items: center;
 }
 
+.repo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; /* Center the cards */
+  align-items: center;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
