@@ -31,8 +31,8 @@
 
 
 
-  <body>
-      <!-- Sidebar -->
+<body>
+  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="profile" style="text-align: center;">
       <div class="profile-img-wrapper">
@@ -67,98 +67,124 @@
     </div>
   </aside>
 
-    <!-- Navbar -->
-    <header class="navbar">
-      <div class="logo"></div>
-      <nav class="nav-links">
-        <button class="navbar-link active" data-nav-link>About</button>
-        <button class="navbar-link" data-nav-link>Resume</button>
-        <button class="navbar-link" data-nav-link>Publications</button>
-        <button class="navbar-link" data-nav-link>Certificates</button>
-        <button class="navbar-link" data-nav-link>Projects</button>
-        <button class="navbar-link" data-nav-link>Repositories</button>
-      </nav>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"></div>
+    <nav class="nav-links">
+      <button class="navbar-link active" data-nav-link>About</button>
+      <button class="navbar-link" data-nav-link>Resume</button>
+      <button class="navbar-link" data-nav-link>Publications</button>
+      <button class="navbar-link" data-nav-link>Certificates</button>
+      <button class="navbar-link" data-nav-link>Projects</button>
+      <button class="navbar-link" data-nav-link>Repositories</button>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+    <!--About Me-->
+    <article class="about active" style="padding-top: 0;" data-page="about">
+    <section id="about">
+      <h2 class="h2"><ion-icon name="person-circle-outline"></ion-icon>About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+    <section id="AcBack">
+      <h2 class="h2"><ion-icon name="book-outline"></ion-icon>Academic Background</h2>
+      <p><b>B.Sc. in Electrical and Electronic Engineering</b> (2019-2024)</br>
+      <i>Khulna University of Engineering and Technology (KUET), Bangladesh</i></p>
+      <p>Thesis: Singular Value Decomposition of Machine Speech</p>
+    </section>
+    <section id="resIn">
+      <h2 class="h2"><ion-icon name="flask-outline"></ion-icon>Research Interest</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac ex nec sapien cursus vestibulum. 
+        Integer feugiat, augue in pellentesque dictum, justo erat ultricies leo, nec varius enim urna eu augue. 
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+        Suspendisse potenti. Nullam ac urna eu felis dapibus condimentum sit amet a augue.
+      </p>
+    </section>
+    <section id="Techskill">
+      <h2 class="h2"><ion-icon name="build-outline"></ion-icon>Technical Skills</h2>
+      <p>
+        <ul>
+          <li><b>Programming:</b> Python, C, C++, Matlab</li>
+          <li><b>Web:</b> Frontend (HTML, CSS, Javascript), Backend (python Flask)</li>
+          <li><b>Design and Simulation:</b> AutoCAD 2D and 3D, TinkerCAD, KiCAD, Simulink</li>
+          <li><b>Microsoft Office:</b> MS Word, MS Excel, MS Powerpoint</li>
+          <li><b>Microcontroller:</b> Arduino and variants, Raspberry Pi</li>
+          <li><b>Image and Video Edit:</b> Adobe Photoshop, Adobe Premiere Pro</li>
+          <li><b>OS:</b> Windows, Linux (Ubuntu)</li>
+        </ul>
+      </p>
+    </section>
+    <section id="Experience">
+      <h2 class="h2"><ion-icon name="extension-puzzle-outline"></ion-icon>Experience</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus, neque id cursus faucibus, 
+        tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. 
+        Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. 
+        Phasellus ultrices nulla quis nibh. Quisque a lectus.
+      </p>
+    </section>
+    <section id="Achievement">
+      <h2 class="h2"><ion-icon name="medal-outline"></ion-icon>Achievements</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus, neque id cursus faucibus, 
+        tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. 
+        Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. 
+        Phasellus ultrices nulla quis nibh. Quisque a lectus.
+      </p>
+    </section>
+    </article>
+
+    <!--Resume-->
+    <article class="resume" data-page="resume" style="height:600px;overflow: hidden;">
+      <h2 class="h2"><ion-icon name="document-text-outline"></ion-icon>Resume</h2>
+      <!--iframe src="https://drive.google.com/file/d/1pnyw-AAsLoFSqrJ5wGxC4Lc9cDLcEJcU/preview?usp=drivesdk" width="640" height="480" allow="autoplay"></iframe-->
+      <object data="assets/misc/SAIKAT_CHAKRABORTY_RESUME.pdf" type="application/pdf"></object>
+    </article>
+
+    <!--Publications-->
+    <article class="pubs" data-page="pubs">
+      <h2 class="h2"><ion-icon name="document-text-outline"></ion-icon>Publications</h2>
+      <div class="container">
+      </img src="assets/images/blog-1.jpg" alt="">
+      <p><b>Formant Estimation Using Singular Value Distribution: An Empirical Study</b> (2025)</br>
+      <p>Saikat Chakraborty and Md. Mahbub Hasan</p></br>
+      <i>2025 IEEE International Conference on Quantum Photonics, Artificial Intelligence & Networking, 2025</i></p>
       </div>
-    </header>
+    </article>
 
-    <!-- Main Content -->
-    <main class="content">
-      <article class="about active" style="padding-top: 0;" data-page="about">
-      <section id="about">
-        <h2 class="h2"><ion-icon name="person-circle-outline"></ion-icon>About Me</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </section>
-      <section id="AcBack">
-        <h2 class="h2"><ion-icon name="book-outline"></ion-icon>Academic Background</h2>
-        <p><b>B.Sc. in Electrical and Electronic Engineering</b> (2019-2024)</br>
-        <i>Khulna University of Engineering and Technology (KUET), Bangladesh</i></p>
-        <p>Thesis: Singular Value Decomposition of Machine Speech</p>
-      </section>
-      <section id="resIn">
-        <h2 class="h2"><ion-icon name="flask-outline"></ion-icon>Research Interest</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac ex nec sapien cursus vestibulum. 
-          Integer feugiat, augue in pellentesque dictum, justo erat ultricies leo, nec varius enim urna eu augue. 
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-          Suspendisse potenti. Nullam ac urna eu felis dapibus condimentum sit amet a augue.
-        </p>
-      </section>
-      <section id="Techskill">
-        <h2 class="h2"><ion-icon name="build-outline"></ion-icon>Technical Skills</h2>
-        <p>
-          <ul>
-            <li><b>Programming:</b> Python, C, C++, Matlab</li>
-            <li><b>Web:</b> Frontend (HTML, CSS, Javascript), Backend (python Flask)</li>
-            <li><b>Design and Simulation:</b> AutoCAD 2D and 3D, TinkerCAD, KiCAD, Simulink</li>
-            <li><b>Microsoft Office:</b> MS Word, MS Excel, MS Powerpoint</li>
-            <li><b>Microcontroller:</b> Arduino and variants, Raspberry Pi</li>
-            <li><b>Image and Video Edit:</b> Adobe Photoshop, Adobe Premiere Pro</li>
-            <li><b>OS:</b> Windows, Linux (Ubuntu)</li>
-          </ul>
-        </p>
-      </section>
-      <section id="Experience">
-        <h2 class="h2"><ion-icon name="extension-puzzle-outline"></ion-icon>Experience</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus, neque id cursus faucibus, 
-          tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. 
-          Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. 
-          Phasellus ultrices nulla quis nibh. Quisque a lectus.
-        </p>
-      </section>
-      <section id="Achievement">
-        <h2 class="h2"><ion-icon name="medal-outline"></ion-icon>Achievements</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus, neque id cursus faucibus, 
-          tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. 
-          Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. 
-          Phasellus ultrices nulla quis nibh. Quisque a lectus.
-        </p>
-      </section>
-      </article>
+    <!--Certificates-->
+    <article class="certs" data-page="certs">
+      <h2 class="h2"><ion-icon name="document-text-outline"></ion-icon>Certificates</h2>
+    </article>
 
+    <!--Projects-->
+    <article class="proj" data-page="proj">
+      <h2 class="h2"><ion-icon name="document-text-outline"></ion-icon>Projects</h2>
+    </article>
 
+    <!--Repositories-->
+    <article class="repos" data-page="repos">
+      <h2 class="h2"><ion-icon name="document-text-outline"></ion-icon>Repositories</h2>
+    </article>
 
-      
-      <article class="resume" data-page="resume" style="height:600px;overflow: hidden;">
-        <h2 class="h2"><ion-icon name="document-text-outline"></ion-icon>Resume</h2>
-        <!--iframe src="https://drive.google.com/file/d/1pnyw-AAsLoFSqrJ5wGxC4Lc9cDLcEJcU/preview?usp=drivesdk" width="640" height="480" allow="autoplay"></iframe-->
-        <!--embed src="assets/misc/SAIKAT_CHAKRABORTY_RESUME.pdf" type="application/pdf"-->
-        <object data="assets/misc/SAIKAT_CHAKRABORTY_RESUME.pdf" type="application/pdf"></object>
-      </article>
-      <footer>
-        <p>&copy; <span id="copyright-year"></span> Saikat Chakraborty</p>
-      </footer>
-    </main>
+    <!--Copyright Footer-->
+    <footer>
+      <p>&copy; <span id="copyright-year"></span> Saikat Chakraborty</p>
+    </footer>
+  </main>
 
   <script src="assets/js/scriptus.js"></script>
 </body>
