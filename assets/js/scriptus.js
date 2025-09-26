@@ -33,6 +33,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
+
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
@@ -41,6 +42,12 @@ const sidebar = document.querySelector(".sidebar");
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+
+    // Collapse hamburger menu if open
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
 
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === "about") {
@@ -52,12 +59,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
-        navigationLinks[i].style.color = "var(--golden-color)";
         window.scrollTo(0, 0);
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
-        navigationLinks[i].style.color = "#fff";
       }
     }
 

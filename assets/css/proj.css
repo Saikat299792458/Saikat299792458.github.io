@@ -1,0 +1,77 @@
+/* Project Section */
+.project-list {
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: rgba(40,40,40,0.8);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.project-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #0003;
+}
+
+.project-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.1rem;
+  color: var(--golden-color);
+}
+
+.project-desc {
+  font-size: 0.98rem;
+  color: #fff;
+}
+
+.project-actions {
+  margin-top: 0.5rem;
+}
+
+.project-actions .pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  background: var(--golden-color);
+  color: #222;
+  padding: 0.35em 1em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.project-actions .pdf-btn:hover, .project-actions .pdf-btn:focus {
+  background: #fff3d1;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  .project-img {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 0.5rem;
+  }
+}

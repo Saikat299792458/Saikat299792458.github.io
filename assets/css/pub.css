@@ -1,0 +1,82 @@
+/* Publications Section */
+.pub-list {
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.pub-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: rgba(40,40,40,0.8);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.pub-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #0003;
+}
+
+.pub-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pub-title {
+  font-size: 1.1rem;
+  color: var(--golden-color);
+}
+
+.pub-authors {
+  font-size: 0.98rem;
+  color: #fff;
+}
+
+.pub-conf {
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+.pub-actions {
+  margin-top: 0.5rem;
+}
+
+.pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  background: var(--golden-color);
+  color: #222;
+  padding: 0.35em 1em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pdf-btn:hover, .pdf-btn:focus {
+  background: #fff3d1;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+    .pub-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  .pub-img {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 0.5rem;
+  }
+}
