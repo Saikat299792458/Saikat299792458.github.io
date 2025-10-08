@@ -9,6 +9,21 @@ function callPhone()
     window.location = "tel:+8801827370418";
 }
 
+// Mode Selector
+function toggleMode() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('mode') === 'sp') { //for scholarships
+    const attach = document.getElementById('Attachment');
+    attach.style.display = 'none';
+    // Change cv innerhtml in resume secion
+  } else { // for private jobs
+    const resIn = document.getElementById('resIn');
+    resIn.style.display = 'none';
+    // Remove Publications section
+  }
+}
+toggleMode();
+
 // Dynamic copyright year
  document.getElementById("copyright-year").textContent = new Date().getFullYear()
 
