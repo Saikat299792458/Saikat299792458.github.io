@@ -190,13 +190,22 @@ body {
   padding-right: 1rem;
   flex: 1;
   overflow-y: auto;
-  text-align: justify;
+  /*text-align: justify;*/
   background: var(--content-color)
 }
 
 .content section {
   margin-bottom: 3rem;
 }
+
+.content article .h2 {
+  margin-bottom: 0.5rem;
+}
+
+.content article ul {
+  margin: 0;
+}
+
 
 .content article .h2 ion-icon {
   vertical-align: middle;
