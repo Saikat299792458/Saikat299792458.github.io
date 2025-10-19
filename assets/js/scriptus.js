@@ -12,14 +12,34 @@ function callPhone()
 // Mode Selector
 function toggleMode() {
   const params = new URLSearchParams(window.location.search);
-  if (params.get('mode') === 'sp') { //for scholarships
-    const attach = document.getElementById('Attachment');
-    attach.style.display = 'none';
-    // Change cv innerhtml in resume secion
-  } else { // for private jobs
-    const resIn = document.getElementById('resIn');
-    resIn.style.display = 'none';
-    // Remove Publications section
+  const mode = params.get('mode');
+
+  const attach = document.getElementById('Attachment');
+  const qpain = document.getElementById('QPAIN');
+  const resIn = document.getElementById('resIn');
+  const resPre = document.getElementById('ResearchPresentation');
+  const pubsSection = document.querySelector('[data-page="publications"]');
+  const navButtons = Array.from(document.querySelectorAll('[data-nav-link]'));
+  const pubsNavBtn = navButtons.find(b => b.innerHTML.trim().toLowerCase() === 'publications');
+  const resumeArticle = document.querySelector('[data-page="resume"]');
+
+  if (mode === 'sp') { // scholarship mode: hide industrial attachments and show scholarship CV
+    if (attach) attach.style.display = 'none';
+
+    if (resumeArticle) {
+      resumeArticle.innerHTML = `
+        <h2 class="h2"><ion-icon name="document-text-outline"></ion-icon>Resume</h2>
+        <object data="assets/misc/SAIKAT_CHAKRABORTY_RESUME_SP.pdf" type="application/pdf" width="100%" height="600"></object>
+      `;
+    }
+  } else { // default / private jobs: hide research material and publications
+    if (resIn) resIn.style.display = 'none';
+    if (resPre) resPre.style.display = 'none';
+    if (qpain) qpain.style.display = 'none';
+
+    // Remove Publications section and its nav button
+    if (pubsSection) pubsSection.remove();
+    if (pubsNavBtn) pubsNavBtn.remove();
   }
 }
 toggleMode();
