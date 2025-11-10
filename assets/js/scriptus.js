@@ -103,3 +103,26 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+const footerLinks = document.querySelectorAll('.footer-nav-link');
+footerLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = (link.dataset.target || '').toString().trim().toLowerCase();
+    if (!target) return;
+    // find corresponding main nav button and trigger its click to reuse existing logic
+    const targetBtn = Array.from(navigationLinks).find(b => b.innerHTML.trim().toLowerCase() === target);
+    if (targetBtn) {
+      targetBtn.click();
+    } else {
+      // fallback: directly show page if nav button is not available (keeps UI consistent)
+      const page = Array.from(pages).find(p => p.dataset.page === target);
+      if (page) {
+        navigationLinks.forEach(n => n.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active'));
+        page.classList.add('active');
+        window.scrollTo(0, 0);
+      }
+    }
+  });
+});
